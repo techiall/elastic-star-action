@@ -1,7 +1,7 @@
 version: '3.2'
 services:
   elasticsearch:
-    images: docker.pkg.github.com/techial1042/elastic-star-action/es:latest
+    image: docker.pkg.github.com/techial1042/elastic-star-action/es:latest
     ports:
       - "9200:9200"
       - "9300:9300"
