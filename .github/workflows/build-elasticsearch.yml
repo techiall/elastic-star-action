@@ -1,0 +1,24 @@
+name: Build elasticsearch
+
+on:
+  push:
+    branches:
+      - master
+  watch:
+    types: [started]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v1
+      - name: build
+        run: |
+          docker login docker.pkg.github.com --username=${{ secrets.USERNAME }} --password=${{ secrets.TOKEN }}
+          docker-compose build
+          docker tag elastic-star-action_elasticsearch:latest docker.pkg.github.com/techial1042/elastic-star-action/es:latest
+          docker push docker.pkg.github.com/techial1042/elastic-star-action/es:latest
+
+
+
