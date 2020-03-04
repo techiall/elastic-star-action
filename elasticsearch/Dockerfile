@@ -11,5 +11,5 @@ RUN mkdir -p /usr/share/elasticsearch/plugins/ik \
     && mkdir -p /usr/share/elasticsearch/plugins/pinyi \
     && cd /usr/share/elasticsearch/plugins/pinyi \
     && wget "https://github.com/medcl/elasticsearch-analysis-pinyin/releases/download/v${ES_VERSION}/elasticsearch-analysis-pinyin-${ES_VERSION}.zip" \
-    && unzip elasticsearch-analysis-pinyin-${ES_VERSION}.zip
+    && unzip elasticsearch-analysis-pinyin-${ES_VERSION}.zip \
     && rm -rf "elasticsearch-analysis-pinyin-${ES_VERSION}.zip"
