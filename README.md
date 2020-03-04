@@ -18,3 +18,6 @@ elasticsearch 有很多个版本，虽然用 docker 可以一键部署
 * `docker-compose-build.yml` 构建 es 镜像
 
 * `docker-compose.yml` 拉取构建镜像并运行
+
+
+> 项目灵感来源：[使用 GitHub Actions 云编译 OpenWrt](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
