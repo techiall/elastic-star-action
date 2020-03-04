@@ -16,7 +16,7 @@ jobs:
       - name: build
         run: |
           docker login docker.pkg.github.com --username=${{ secrets.USERNAME }} --password=${{ secrets.TOKEN }}
-          docker-compose build
+          docker-compose -f docker-compose-build.yml build
           docker tag elastic-star-action_elasticsearch:latest docker.pkg.github.com/techial1042/elastic-star-action/es:latest
           docker push docker.pkg.github.com/techial1042/elastic-star-action/es:latest
 
