@@ -1,5 +1,5 @@
 ARG ES_VERSION
-FROM elasticsearch:${ES_VERSION}
+FROM docker.elastic.co/elasticsearch/elasticsearch:${ES_VERSION}
 
 ARG ES_VERSION
 RUN mkdir -p /usr/share/elasticsearch/plugins/ik \
