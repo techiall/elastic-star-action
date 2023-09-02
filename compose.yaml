@@ -1,0 +1,9 @@
+services:
+  elasticsearch:
+    image: ghcr.io/techiall/elasticsearch:7.16.1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+    mem_limit: 1G
