@@ -24,6 +24,6 @@ jobs:
       - uses: docker/build-push-action@v4
         with:
           push: true
-          tags: ghcr.io/${{ github.event.repository }}/elasticsearch:${{ github.event.inputs.version }}
+          tags: ghcr.io/${{ github.repository }}/elasticsearch:${{ github.event.inputs.version }}
           build-args:
             ES_VERSION=${{ github.event.inputs.version }}
